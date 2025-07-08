@@ -15,14 +15,14 @@ function App(){
         }
     );
 
-    const [education,setEducation] = useState(
+    const [education,setEducation] = useState([
         {
 
             school:"",
             degree:"",
             from:"",
             to:"",
-        }
+        }]
     );
 
     const [experience,setExperience] = useState(
