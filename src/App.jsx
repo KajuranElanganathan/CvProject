@@ -44,7 +44,7 @@ function App(){
 
                 <GeneralSection  general = {general} setGeneral = {setGeneral} />
                 <ExperienceSection education = {education} setEducation = {setEducation} />
-                <EducationSection experience = {experience} setExperience = {setExperience} />
+
 
 
             </div>
