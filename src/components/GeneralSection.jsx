@@ -1,64 +1,55 @@
-function GeneralSection({general,setGeneral}){
+import './GeneralSection.css';
 
+function GeneralSection({ general, setGeneral, onSubmit }) {
+  const handleChange = (field, value) => {
+    setGeneral({
+      ...general,
+      [field]: value,
+    });
+  };
 
-    const helperfunction = (field,value) => {
+  return (
+    <div className="general-form">
+      <h2 className="form-title">Personal Details</h2>
 
-        setGeneral({
-            ...general,
-            [field]:value,
+      <div className="form-group">
+        <label htmlFor="name">Full name</label>
+        <input
+          id="name"
+          type="text"
+          placeholder="Enter full name"
+          value={general.name}
+          onChange={(e) => handleChange('name', e.target.value)}
+        />
+      </div>
 
+      <div className="form-group">
+        <label htmlFor="email">Email</label>
+        <input
+          id="email"
+          type="text"
+          placeholder="Enter your email"
+          value={general.email}
+          onChange={(e) => handleChange('email', e.target.value)}
+        />
+      </div>
 
-        }
-        );
-    };
+      <div className="form-group">
+        <label htmlFor="phone">Phone number</label>
+        <input
+          id="phone"
+          type="text"
+          placeholder="Enter your phone number"
+          value={general.phone}
+          onChange={(e) => handleChange('phone', e.target.value)}
+        />
+      </div>
 
-
-    return (
-
-        <div className="general-form">
-
-            <h2>General Information</h2>
-
-
-
-            <label>
-                Name:
-                <input type="text"
-                placeholder= "enter full name"
-                value={general.name}
-                onChange={(e) => helperfunction('name',e.target.value)}
-                
-                />
-            </label>
-
-            <label>
-                Email:
-                <input type="text"
-                placeholder= "enter your email"
-                value={general.email}
-                onChange={(e) => helperfunction('email',e.target.value)}
-                
-                
-                
-                />
-            </label>
-
-
-            <label>
-                Phone:
-                <input type="text"
-                placeholder= "enter your phone number"
-                value={general.phone}
-                onChange={(e) => helperfunction('phone',e.target.value)}
-                
-                
-                
-                />
-            </label>
-        </div>
-
-    );
-
+      <button className="submit-button" onClick={onSubmit}>
+        Submit
+      </button>
+    </div>
+  );
 }
 
 export default GeneralSection;

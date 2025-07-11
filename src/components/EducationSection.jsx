@@ -1,6 +1,6 @@
-function EducationSection({education,setEducation}){
+function EducationSection({education,setEducation,onSubmit}){
 
-    const handleChange = (index,field,value,) =>{
+    const handleChange = (index,field,value) =>{
 
         const updated = [...education];
             updated[index] = {
@@ -75,8 +75,10 @@ return (
             />
           </label>
 
+          <button onClick = {onSubmit}>Submit</button>
           <button onClick={() => removeEntry(index)}>Remove</button>
           <hr />
+          
         </div>
       ))}
 

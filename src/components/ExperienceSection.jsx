@@ -1,7 +1,7 @@
-function ExperienceSection({experience,setExperience}){
+function ExperienceSection({experience,setExperience,onSubmit}){
 
 
-    const handleChange= (index,value,field)=> {
+    const handleChange= (index,field,value)=> {
         const updated = [...experience];
         updated[index] = {
 
@@ -65,7 +65,7 @@ function ExperienceSection({experience,setExperience}){
 
           <label>
             Responsibilities:
-            <textarea
+            <input
               value={entry.responsibilities}
               onChange={(e) =>
                 handleChange(index, "responsibilities", e.target.value)
@@ -89,6 +89,7 @@ function ExperienceSection({experience,setExperience}){
               value={entry.to}
               onChange={(e) => handleChange(index, "to", e.target.value)}
             />
+            <button onClick = {onSubmit}>Submit</button>
           </label>
 
           <button onClick={() => removeEntry(index)}>Remove</button>
