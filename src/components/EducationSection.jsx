@@ -1,3 +1,6 @@
+import './EducationSection.css';
+
+
 function EducationSection({education,setEducation,onSubmit}){
 
     const handleChange = (index,field,value) =>{
@@ -34,56 +37,60 @@ function EducationSection({education,setEducation,onSubmit}){
 
 
 return (
-    <div>
-      <h2>Education</h2>
+    <div className="education-form">
+  <h2>Education</h2>
 
-      {education.map((entry, index) => (
-        <div key={index}>
-          <label>
-            School:
-            <input
-              type="text"
-              value={entry.school}
-              onChange={(e) => handleChange(index, "school", e.target.value)}
-            />
-          </label>
+  {education.map((entry, index) => (
+    <div className="education-entry" key={index}>
+      <label>
+        School:
+        <input
+          type="text"
+          value={entry.school}
+          onChange={(e) => handleChange(index, "school", e.target.value)}
+        />
+      </label>
 
-          <label>
-            Degree:
-            <input
-              type="text"
-              value={entry.degree}
-              onChange={(e) => handleChange(index, "degree", e.target.value)}
-            />
-          </label>
+      <label>
+        Degree:
+        <input
+          type="text"
+          value={entry.degree}
+          onChange={(e) => handleChange(index, "degree", e.target.value)}
+        />
+      </label>
 
-          <label>
-            From:
-            <input
-              type="text"
-              value={entry.from}
-              onChange={(e) => handleChange(index, "from", e.target.value)}
-            />
-          </label>
+      <label>
+        From:
+        <input
+          type="text"
+          value={entry.from}
+          onChange={(e) => handleChange(index, "from", e.target.value)}
+        />
+      </label>
 
-          <label>
-            To:
-            <input
-              type="text"
-              value={entry.to}
-              onChange={(e) => handleChange(index, "to", e.target.value)}
-            />
-          </label>
+      <label>
+        To:
+        <input
+          type="text"
+          value={entry.to}
+          onChange={(e) => handleChange(index, "to", e.target.value)}
+        />
+      </label>
 
-          <button onClick = {onSubmit}>Submit</button>
-          <button onClick={() => removeEntry(index)}>Remove</button>
-          <hr />
-          
-        </div>
-      ))}
+      <div className="education-buttons">
+        <button onClick={onSubmit}>Submit</button>
+        <button onClick={() => removeEntry(index)}>Remove</button>
+      </div>
 
-      <button onClick={addEntry}>Add Education</button>
+      <hr />
     </div>
+  ))}
+
+  <button className="add-entry-btn" onClick={addEntry}>
+    Add Education
+  </button>
+</div>
   );
 }
 
