@@ -47,14 +47,17 @@ h1 {
 
 /* Preview section */
 .preview {
-  background-color: #ffffff;
-  padding: 20px;
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 794px; /* ≈ 8.5 inches at 96dpi */
+  height: 1123px; /* ≈ 11.7 inches (A4) */
+  background-color: white;
+  padding: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
 }
+
 
 /* Responsive text and layout */
 input, button, textarea {

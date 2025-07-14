@@ -42,7 +42,7 @@ function GeneralSection({ general, setGeneral, onSubmit }) {
         />
       </div>
 
-      <button className="submit-button" onClick={onSubmit}>
+      <button type = "button" className="submit-button" onClick={onSubmit}>
         Submit
       </button>
     </div>

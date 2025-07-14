@@ -1,0 +1,85 @@
+.resume-preview {
+  width: 794px;
+  height: 1123px;
+  background-color: white;
+  padding: 48px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #111827;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 6px;
+}
+
+.resume-header {
+  text-align: center;
+  border-bottom: 2px solid #d1d5db;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.resume-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.resume-header p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.resume-section {
+  margin-bottom: 20px;
+}
+
+.resume-section h2 {
+  font-size: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #374151;
+}
+
+.resume-item {
+  margin-bottom: 16px;
+}
+
+.item-header {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.item-dates {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.item-description {
+  font-size: 14px;
+  color: #374151;
+  margin-top: 4px;
+}
+
+.item-description {
+  padding-left: 20px;
+  margin-top: 6px;
+}
+
+.item-description li {
+  list-style-type: disc;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+
+.no-preview {
+  font-style: italic;
+  color: #9ca3af;
+  padding: 20px;
+}
