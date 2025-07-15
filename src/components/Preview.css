@@ -1,17 +1,3 @@
-.resume-preview {
-  width: 794px;
-  height: 1123px;
-  background-color: white;
-  padding: 48px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #111827;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  border-radius: 6px;
-}
 
 .resume-header {
   text-align: center;
@@ -83,3 +69,4 @@
   color: #9ca3af;
   padding: 20px;
 }
+

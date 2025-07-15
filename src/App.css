@@ -45,21 +45,19 @@ h1 {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Preview section */
+
 .preview {
-  width: 794px; /* ≈ 8.5 inches at 96dpi */
-  height: 1123px; /* ≈ 11.7 inches (A4) */
-  background-color: white;
-  padding: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
-  border-radius: 6px;
-  font-family: Arial, sans-serif;
-  margin: 0 auto;
+    width: 100%; 
+    max-width: 900px; 
+    height: auto; 
+    background-color: white;
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px; 
 }
 
-
-/* Responsive text and layout */
 input, button, textarea {
   font-size: 16px;
 }
@@ -75,3 +73,5 @@ input, button, textarea {
     max-width: none;
   }
 }
+
+

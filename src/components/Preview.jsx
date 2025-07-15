@@ -1,10 +1,12 @@
 import './Preview.css';
 
 function Preview({ general, education, experience }) {
-  if (!general || !education || !experience) {
-    return <p className="no-preview">Submit to see your preview</p>;
-  }
+  if (!general) {
+    return (
+        <p className="no-preview">Submit to see your preview</p>
 
+    );
+  }
   return (
     <div className="resume-preview">
       <header className="resume-header">
