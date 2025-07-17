@@ -29,6 +29,28 @@ h1 {
   flex-wrap: wrap;
 }
 
+
+.download{
+
+  background-color: #5c4dff;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+
+
+}
+
+.download-section {
+    text-align: right; /* Aligns inline content (like the button) to the right */
+    padding: 10px; /* Optional: Add some padding for spacing */
+}
+
+
 .form-section {
   display: flex;
   flex-direction: column;
@@ -50,12 +72,18 @@ h1 {
     width: 100%; 
     max-width: 900px; 
     height: auto; 
-    background-color: white;
     margin: 0 auto; 
     padding: 20px; 
     box-sizing: border-box; 
     border: 1px solid #e0e0e0; 
     border-radius: 8px; 
+    background-color: white;
+}
+
+.resume{
+
+background-color: white;
+
 }
 
 input, button, textarea {

@@ -1,14 +1,15 @@
 import './Preview.css';
+import React, { forwardRef } from 'react';
 
-function Preview({ general, education, experience }) {
+const Preview = forwardRef(({ general, education, experience }, ref) => {
   if (!general) {
     return (
-        <p className="no-preview">Submit to see your preview</p>
-
+      <p className="no-preview">Submit your personal details to see your resume!</p>
     );
   }
+
   return (
-    <div className="resume-preview">
+    <div ref={ref} className="resume-preview">
       <header className="resume-header">
         <h1>{general.name}</h1>
         <p>{general.email} | {general.phone}</p>
@@ -58,6 +59,6 @@ function Preview({ general, education, experience }) {
       )}
     </div>
   );
-}
+});
 
 export default Preview;

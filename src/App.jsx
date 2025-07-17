@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './App.css';
+import { useRef } from 'react';
+import html2pdf from 'html2pdf.js';
 import GeneralSection from './components/GeneralSection';
 import EducationSection from './components/EducationSection';
 import ExperienceSection from './components/ExperienceSection';
@@ -43,6 +45,18 @@ function App(){
     const [finalExperience,setFinalExperience] = useState(null);
     const [finalEducation,setFinalEducation] = useState(null);
 
+
+    const prevref = useRef();
+
+    const handleDownload = () => {
+    const element = prevref.current; // this is the actual DOM element
+    if (!element) return;
+
+  html2pdf().from(element).save();
+};
+
+    
+
     return (
 
 
@@ -72,21 +86,34 @@ function App(){
                 <ExperienceSection experience = {experience} setExperience = {setExperience} setFinalExperience = {setFinalExperience} onSubmit = {()=>setFinalExperience(experience)}/>
                 </div>
 
-            </div> 
+            </div>
+
+            
 
 
 
-            <div className = "preview" >  
+            <div className = "preview">  
+
+                <div className = "download-section">
+
+                 <button className="download" onClick={handleDownload}>
+                        Download PDF
+                </button>
+
+                </div>
 
 
+                <div className = "resume">
 
                 <Preview
+                    ref = {prevref}
                     general = {finalGeneral}
                     education = {finalEducation}
                     experience = {finalExperience}
 
                 />
 
+                </div>
 
 
             </div>
