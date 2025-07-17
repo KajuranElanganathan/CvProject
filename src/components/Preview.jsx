@@ -46,7 +46,7 @@ const Preview = forwardRef(({ general, education, experience }, ref) => {
               {exp.info && (
                 <ul className="item-description">
                   {exp.info
-                    .split('\n')
+                    .split('  ')
                     .filter(line => line.trim() !== '')
                     .map((line, pt) => (
                       <li key={pt}>{line}</li>
